@@ -160,7 +160,4 @@ if __name__ == '__main__':
     print(lista)
     lista.insertar_en_posicion(1,1)
     print(lista)
-    lista.eliminar_dcha(3)
-    print(lista)
-    #print(lista.consultar_por_indice(4))
-
+    print(lista.consultar_por_indice(4))
