@@ -24,13 +24,21 @@ class Pieza:
 
 def seleccion(lista:list):
     tamanio = len(lista)
-    aux = lista[0]
-    solucion = []
+    aux2 = 0
     #comparamos el primer elemento con todos los demas
-    seleccionado = 1 #indice que queremos ordenar
-    while seleccionado != tamanio:
+    seleccionado = 0 #indice que queremos ordenar
+    while seleccionado != tamanio:       
         for i in range(seleccionado,tamanio):
-            if aux > lista[seleccionado]:
-                aux = lista[seleccionado]
-                
+            aux1 = lista[seleccionado]
+            if aux1 > lista[i]:
+                aux2 = aux1
+                #sustituimos el valor menor en el indice que estamos comparando
+                aux1 = lista[i]
+                lista[i]= aux2
+                         
         seleccionado += 1
+    return lista
+
+if __name__ == "__main__":
+    lista=[2,3,1]
+    print(seleccion(lista))
