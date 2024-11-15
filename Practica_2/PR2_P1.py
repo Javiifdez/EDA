@@ -27,18 +27,19 @@ def seleccion(lista:list):
     aux2 = 0
     #comparamos el primer elemento con todos los demas
     seleccionado = 0 #indice que queremos ordenar
-    while seleccionado != tamanio:       
-        for i in range(seleccionado,tamanio):
-            aux1 = lista[seleccionado]
-            if aux1 > lista[i]:
-                aux2 = aux1
+    while seleccionado != tamanio: 
+        aux1 = lista[seleccionado]      
+        for i in range(seleccionado+1,tamanio):
+            
+            if lista[seleccionado] > lista[i]:#el pivote es mayor que el comparado
                 #sustituimos el valor menor en el indice que estamos comparando
                 aux1 = lista[i]
-                lista[i]= aux2
+                lista[seleccionado] = lista[i]
+                lista[i] = aux1
                          
         seleccionado += 1
     return lista
 
 if __name__ == "__main__":
-    lista=[1,3,1]
+    lista=[3,3,1]
     print(seleccion(lista))
