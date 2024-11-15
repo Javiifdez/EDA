@@ -22,6 +22,7 @@ class Pieza:
         self.unidades = unidades
         self.nombre = nombre
 
+#TO-DO ALGORITMO NO ES EL DE SELECCION
 def seleccion(lista:list):
     tamanio = len(lista)
     aux2 = 0
@@ -39,6 +40,10 @@ def seleccion(lista:list):
                          
         seleccionado += 1
     return lista
+
+def quicksort(lista:list):
+    tamanio = len(lista)
+
 
 if __name__ == "__main__":
     lista=[2,5,3,1]
