@@ -40,5 +40,5 @@ def seleccion(lista:list):
     return lista
 
 if __name__ == "__main__":
-    lista=[2,3,1]
+    lista=[1,3,1]
     print(seleccion(lista))
