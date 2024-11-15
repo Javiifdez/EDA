@@ -21,7 +21,7 @@ class Pieza:
         self.precio = precio
         self.unidades = unidades
         self.nombre = nombre
-
+"""
 #TO-DO ALGORITMO NO ES EL DE SELECCION
 def seleccion(lista:list):
     tamanio = len(lista)
@@ -40,6 +40,17 @@ def seleccion(lista:list):
                          
         seleccionado += 1
     return lista
+"""
+def seleccion(lista:list):
+    tamanio = len(lista)
+    pivote = 0
+    while pivote != tamanio:
+        esmenor = lista[pivote]
+        for i in range(pivote+1,tamanio):
+            if esmenor > lista[i]:
+                esmenor= lista[i]
+                
+
 
 def quicksort(lista:list):
     tamanio = len(lista)
