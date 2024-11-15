@@ -33,13 +33,13 @@ def seleccion(lista:list):
             
             if lista[seleccionado] > lista[i]:#el pivote es mayor que el comparado
                 #sustituimos el valor menor en el indice que estamos comparando
-                aux1 = lista[i]
-                lista[seleccionado] = lista[i]
-                lista[i] = aux1
+                aux1 = lista[seleccionado]
+                lista[seleccionado] = lista[i]#el elemento menor ahora es el nuevo pivote    
+                lista[i] = aux1 #sustituimos el antiguo pivote
                          
         seleccionado += 1
     return lista
 
 if __name__ == "__main__":
-    lista=[3,3,1]
+    lista=[2,5,3,1]
     print(seleccion(lista))
